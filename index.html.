@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Chef</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background: #fffdf7;
+      color: #333;
+    }
+    header {
+      background: #d35400;
+      color: #fff;
+      padding: 1rem 2rem;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+    nav {
+      margin-top: 0.5rem;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    section {
+      padding: 3rem 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    .hero {
+      text-align: center;
+      background: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
+      color: white;
+      padding: 5rem 2rem;
+      border-radius: 10px;
+    }
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      text-shadow: 1px 1px 3px #000;
+    }
+    .btn {
+      background: #e67e22;
+      padding: 0.8rem 1.5rem;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+    .btn:hover {
+      background: #ca6214;
+    }
+    .recipes {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+    .card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: scale(1.05);
+    }
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .card h3 {
+      margin: 0.5rem;
+      color: #d35400;
+    }
+    .card p {
+      margin: 0.5rem;
+      font-size: 0.9rem;
+      color: #555;
+    }
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background: #d35400;
+      color: white;
+      margin-top: 2rem;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+    input, textarea {
+      padding: 0.7rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      background: #e67e22;
+      padding: 0.8rem;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+    button:hover {
+      background: #ca6214;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>The Chef</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#recipes">Recipes</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <h2>Welcome to The Chef</h2>
+    <p>Delicious meals, easy recipes, and culinary inspiration.</p>
+    <a href="#recipes" class="btn">Explore Recipes</a>
+  </section>
+
+  <section id="recipes">
+    <h2>Featured Recipes</h2>
+    <div class="recipes">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1604909053199-f25c3afc9f52?auto=format&fit=crop&w=800&q=80" alt="Pasta">
+        <h3>Italian Pasta</h3>
+        <p>Rich flavors of Italy served fresh and hot.</p>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1617196039897-84a9aa64b65b?auto=format&fit=crop&w=800&q=80" alt="Salad">
+        <h3>Healthy Salad</h3>
+        <p>A colorful mix of greens, veggies, and fruits.</p>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1553621042-f6e147245754?auto=format&fit=crop&w=800&q=80" alt="Burger">
+        <h3>Juicy Burger</h3>
+        <p>Perfectly grilled with fresh toppings.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About The Chef</h2>
+    <p>
+      At The Chef, we believe cooking is more than a meal — it's an experience.  
+      From traditional dishes to modern fusions, we bring you recipes designed to inspire creativity in the kitchen.
+    </p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form onsubmit="sendMessage(event)">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 The Chef. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function sendMessage(event) {
+      event.preventDefault();
+      alert("Thank you for contacting The Chef! We’ll reply soon.");
+    }
+  </script>
+</body>
+</html>
